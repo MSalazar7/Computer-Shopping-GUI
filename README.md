@@ -1,0 +1,1 @@
+Java Program utilizing Javafx and Object-Oriented-Programming to build a simple User Interface. Allows a user to build a PC by selecting parts which creates a PC object and presents the total of each part at the end. 
