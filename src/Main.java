@@ -1,14 +1,14 @@
-package hw09;
+package src;
 
 
 import java.util.Scanner;
 
 /**
  * This is a class to model a PC object. It can store the tower, motherboard, processor, videoCard, hardDrive, memory, monitor
- * 
+ *
  * To create an instance of the Case class use the following:
  * PC pc = new PC(); default case
- * 
+ *
  * @author Michael Salazar, 401146782, CS2012, Sections 01/02
  * https://calstatela.instructuremedia.com/embed/4cb38ca2-b850-41fe-9336-206403ca80f2
  */
@@ -16,7 +16,7 @@ public class Main {
 	public static void main(String[] args) {
 		mainMenu();
 		displayParts();
-		
+
 	}
 	/**
 	 * A method to display the options in the menu.
@@ -33,7 +33,7 @@ public class Main {
 	System.out.println("    8. Display Reciept");
 	System.out.println("    9. Exit Program");
 	System.out.println("********************************");
-	
+
 	}
 	 /**
 	  *  A method to display the pc parts and add them to the pc.
@@ -42,35 +42,35 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		Inventory inv = new Inventory();
 		inv.initializeInventory();
-		PC pc = new PC(); 
-		
+		PC pc = new PC();
+
 		while(true) {
 		int choice = in.nextInt();
-		if(choice == 1) { 
+		if(choice == 1) {
 			System.out.println("");
 			inv.printCases();
 			System.out.println("Would you like the first, second, or third option:(1, 2, 3)");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addCase(inv.getCase(0));
-			
+
 			}
 			if (choice2 == 2) {
 				pc.addCase(inv.getCase(1));
 			}
 			if (choice2 == 3) {
 				pc.addCase(inv.getCase(2));
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 2) {
 			System.out.println("");
 			inv.printMotherBoards();
-			
+
 			System.out.println("Would you like the first, second, or third option:(1, 2, 3)");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addMotherBoard(inv.getMotherBoard(0));
 			}
@@ -79,7 +79,7 @@ public class Main {
 			}
 			if (choice2 == 3) {
 				pc.addMotherBoard(inv.getMotherBoard(2));
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 3) {
@@ -87,7 +87,7 @@ public class Main {
 			inv.printMonitors();
 			System.out.println("Would you like the first, second, or third option:(1, 2, 3)");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addMonitor(inv.getMonitor(0));
 			}
@@ -96,7 +96,7 @@ public class Main {
 			}
 			if (choice2 == 3) {
 				pc.addMonitor(inv.getMonitor(2));;
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 4) {
@@ -104,7 +104,7 @@ public class Main {
 			inv.printProcessors();
 			System.out.println("Would you like the first, second, or third option:(1, 2, 3)");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addProcessor(inv.getProcessor(0));
 			}
@@ -113,7 +113,7 @@ public class Main {
 			}
 			if (choice2 == 3) {
 				pc.addProcessor(inv.getProcessor(2));
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 5) {
@@ -121,7 +121,7 @@ public class Main {
 			inv.printVideoCards();
 			System.out.println("Would you like the first, second, or third option:(1, 2, 3)");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addVideoCard(inv.getVideoCard(0));
 			}
@@ -130,7 +130,7 @@ public class Main {
 			}
 			if (choice2 == 3) {
 				pc.addVideoCard(inv.getVideoCard(2));
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 6) {
@@ -138,7 +138,7 @@ public class Main {
 			inv.printHardDrive();
 			System.out.println("Would you like the first, second, or third option:(1, 2, 3)");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addHardDrive(inv.getHardDrive(0));
 			}
@@ -147,7 +147,7 @@ public class Main {
 			}
 			if (choice2 == 3) {
 				pc.addHardDrive(inv.getHardDrive(2));;
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 7) {
@@ -155,7 +155,7 @@ public class Main {
 			inv.printMemory();
 			System.out.println("Would y1ou like the first, second, or third option:");
 			int choice2 = in.nextInt();
-			
+
 			if(choice2 == 1) {
 				pc.addMemory(inv.getMemory(0));
 			}
@@ -164,7 +164,7 @@ public class Main {
 			}
 			if (choice2 == 3) {
 				pc.addMemory(inv.getMemory(2));
-			} 
+			}
 			mainMenu();
 		}
 		else if(choice == 8) {
@@ -173,7 +173,7 @@ public class Main {
 			//double sum = pc.computeTotalCost();
 			//System.out.println("Total:........................................$"+ String.format("%.2f", sum));
 			System.exit(0);
-				
+
 		}
 		else if(choice == 9) {
 			System.exit(0);
@@ -183,11 +183,8 @@ public class Main {
 			mainMenu();
 			displayParts();
 		}
-		
+
 		}
-		
+
 	}
 }
-
-	
-	
